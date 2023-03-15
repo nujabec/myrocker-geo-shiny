@@ -7,7 +7,7 @@ add : shiny server
 
 ## docker run sample
 
-docker run --rm -d -p 28787:8787 -p 23838:3838 -e PASSWORD=rs -e ROOT=TRUE -v $PWD/srv/:/home/rstudio/srv/ -v $PWD/srv/shinyapps/:/srv/shiny-server/ -v $PWD/srv/shinylog/:/var/log/shiny-server/ --name nujabec/myrocker-geo-shiny myrocker-geo-shiny
+docker run --rm -d -p 28787:8787 -p 23838:3838 -e PASSWORD=rs -e ROOT=TRUE -v $PWD/srv/:/home/rstudio/srv/ -v $PWD/srv/shinyapps/:/srv/shiny-server/ -v $PWD/srv/shinylog/:/var/log/shiny-server/ --name nujabec/myrocker-geo-shiny:0.6 myrocker-geo-shiny
 
 ## docker-compose sample
 
