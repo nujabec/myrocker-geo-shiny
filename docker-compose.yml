@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  rstudio:
+    build: ./docker/
+    image: myrocker-geo-shiny:0.6
+    container_name: myrocker-geo-shiny-compose
+    ports: 
+      - 28787:8787
+      - 23838:3838
+    volumes:
+      - ../srv/:/home/rstudio/srv/
+      - ../srv/shinyapps:/srv/shiny-server/
+      - ../srv/shinylog:/var/log/shiny-server/
+    environment:
+      PASSWORD: rs
+      ROOT: 'TRUE'
+      TZ: Asia/Tokyo
+    tty: true
+    stdin_open: true
