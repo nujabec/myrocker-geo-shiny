@@ -12,5 +12,6 @@ docker run --rm -d -p 28787:8787 -p 23838:3838 -e PASSWORD=rs -e ROOT=TRUE -v $P
 ## docker-compose sample
 
 docker-compose build 
+
 docker-compose up -d
 
