@@ -3,11 +3,11 @@ version: '3'
 services:
   rstudio:
     build: ./docker/
-    image: nujabec/myrocker-geo-shiny:0.6
-    container_name: myrocker-geo-shiny-compose
+    image: nujabec/myrocker-geo-shiny:0.8
+    container_name: myrocker-geo-shiny
     ports: 
-      - 28787:8787
-      - 23838:3838
+      - 8787:8787
+      - 3838:3838
     volumes:
       - ../srv/:/home/rstudio/srv/
       - ../srv/shinyapps:/srv/shiny-server/

@@ -167,6 +167,16 @@ RUN installGithub.r \
   uribo/jpndistrict \
   mlr-org/shinyMlr 
 
+# パッケージ追加 20230517
+RUN install2.r --error --skipinstalled --deps TRUE --ncpu -1\
+    gghighlight \
+    ggThemeAssist \
+    targets \
+    revealjs \
+    docxtractr \
+    cronR \
+    export
+
 # 参考:Rstudio serverの細かい設定をdockerfileから自動化する
 # https://qiita.com/taiyodayo/items/49b90e785b1c6ce828b8
 

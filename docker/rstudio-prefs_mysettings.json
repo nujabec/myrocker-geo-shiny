@@ -5,8 +5,6 @@
     "initial_working_directory": "~",
     "always_save_history": false,
     "restore_last_project": false,
-    "insert_native_pipe_operator": true,
-    "continue_comments_on_newline": true,
     "show_invisibles": true,
     "highlight_r_function_calls": true,
     "rainbow_parentheses": true,
