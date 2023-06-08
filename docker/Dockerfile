@@ -59,11 +59,9 @@ RUN install2.r --error --skipinstalled --deps TRUE --ncpu -1\
     spdep \
     rmarkdown \
     reportfactory \
-    officer \
     flexdashboard \
     shiny \
     knitr \
-    flextable \
     DT \
     gt \
     huxtable \
@@ -161,12 +159,6 @@ RUN install2.r --error --skipinstalled --deps TRUE --ncpu -1\
     miniCRAN \
     rjson
 
-# GitHubからのインストール
-RUN installGithub.r \
-  uribo/jpmesh \
-  uribo/jpndistrict \
-  mlr-org/shinyMlr 
-
 # パッケージ追加 20230517
 RUN install2.r --error --skipinstalled --deps TRUE --ncpu -1\
     gghighlight \
@@ -176,6 +168,15 @@ RUN install2.r --error --skipinstalled --deps TRUE --ncpu -1\
     docxtractr \
     cronR \
     export
+
+# GitHubからのインストール
+RUN installGithub.r \
+  davidgohel/gdtools \
+  davidgohel/officer \
+  davidgohel/flextable \
+  uribo/jpmesh \
+  uribo/jpndistrict \
+  mlr-org/shinyMlr 
 
 # 参考:Rstudio serverの細かい設定をdockerfileから自動化する
 # https://qiita.com/taiyodayo/items/49b90e785b1c6ce828b8
