@@ -15,3 +15,10 @@ docker-compose build
 
 docker-compose up -d
 
+## docker save
+
+docker save -o myrocker-geo-shiny_09.tar nujabec/myrocker-geo-shiny:0.9 
+
+## docker load
+
+docker load -i myrocker-geo-shiny_09.tar
