@@ -1,11 +1,13 @@
-version: '3'
+version: "3"
 
 services:
   rstudio:
-    build: ./docker/
-    image: nujabec/myrocker-geo-shiny:0.9
+    build: 
+      context: ./docker/
+      dockerfile: Dockerfile
+    image: nujabec/myrocker-geo-shiny:1.0
     container_name: myrocker-geo-shiny
-    ports: 
+    ports:
       - 8787:8787
       - 3838:3838
     volumes:
@@ -14,7 +16,7 @@ services:
       - ../srv/shinylog:/var/log/shiny-server/
     environment:
       PASSWORD: rs
-      ROOT: 'TRUE'
+      ROOT: "TRUE"
       TZ: Asia/Tokyo
     tty: true
     stdin_open: true
